@@ -518,6 +518,45 @@ async function showOneProduct(productId) {
   }
 }
 
+function displayProductsPaginatedPage(data, currPage, pageSize) {
+  const endPage = Math.ceil(data.length / pageSize) - 1;
+  const dataPaginated = data.slice(currPage * pageSize, Math.min(data.length, currPage * pageSize + pageSize));
+  dataPaginated.forEach(({title, description, price, category, id}) => {
+    container.querySelector(".products__lists").insertAdjacentHTML("beforeend", `
+      <div class="product__row" data-productid="${id}">
+        <div class="product-col__category">
+          ${category}
+        </div>
+        <div class="product-col__title">
+          ${title}
+        </div>
+        <div class="product-col__info">
+          ${shortSentence(description)}
+        </div>
+        <div class="product-col__price">
+          ${price}
+        </div>
+        <div class="product-col__funcs">
+          <span class="edit">Edit</span>
+          <span class="delete">Delete</span>
+          <span class="show__product">Show</span>
+        </div>
+      </div>                
+    `);
+  });
+  container.insertAdjacentHTML('beforeend', `
+    <div class="pagination__restfuncs">
+      <div class="pagination__btns">
+        ${currPage > 0 ? '<span class="pagination__btn pagination__btn--left"><i class="fa-solid fa-angles-left"></i> &nbsp; Previous</span>' : ""}
+        ${currPage != endPage ? '<span class="pagination__btn pagination__btn--right">Next  &nbsp; <i class="fa-solid fa-angles-right"></i></span>' : ""}
+      </div>
+      <div class="pagination__info">
+        Page ${currPage + 1} of ${endPage + 1}.
+      </div>
+    </div>
+  `);
+}
+
 async function getProducts() {
   let url = "http://localhost:4001/products";
   if (getQueryParams()) url += getQueryParams();
@@ -526,30 +565,25 @@ async function getProducts() {
     if (!res.ok) {
       throw new Error(`Error ${data.status}`);
     }
-    let data = await res.json();
-    data.forEach(({title, description, price, category, id}) => {
-      container.querySelector(".products__lists").insertAdjacentHTML("beforeend", `
-        <div class="product__row" data-productid="${id}">
-          <div class="product-col__category">
-            ${category}
-          </div>
-          <div class="product-col__title">
-            ${title}
-          </div>
-          <div class="product-col__info">
-            ${shortSentence(description)}
-          </div>
-          <div class="product-col__price">
-            ${price}
-          </div>
-          <div class="product-col__funcs">
-            <span class="edit">Edit</span>
-            <span class="delete">Delete</span>
-            <span class="show__product">Show</span>
-
-          </div>
-        </div>                
-      `);
+    let data = await res.json(); // Total datas
+    let currPage = 0;
+    let pageSize = 2;
+    displayProductsPaginatedPage(data, currPage, pageSize);
+    document.addEventListener("click", function(e) {
+      const el = e.target, parent = el.parentElement;
+      if (el.classList.contains("pagination__btn--right") || parent.classList.contains("pagination__btn--right")) {
+        currPage++;
+        document.querySelectorAll(".product__row").forEach(rowDiv => rowDiv.remove());
+        document.querySelector(".pagination__restfuncs").remove();
+        displayProductsPaginatedPage(data, currPage, pageSize);
+        console.log("Next button was clicked");
+      } else if (el.classList.contains("pagination__btn--left") || parent.classList.contains("pagination__btn--left")) {
+        currPage--;
+        document.querySelectorAll(".product__row").forEach(rowDiv => rowDiv.remove());
+        document.querySelector(".pagination__restfuncs").remove();
+        displayProductsPaginatedPage(data, currPage, pageSize);
+        console.log("Previous button was clicked");
+      }
     });
   } catch(err) {
     console.log("Error", err);
