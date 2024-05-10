@@ -1,0 +1,45 @@
+------------------------------- Ecommerce dashboard (notes) -------------------------------------
+
+
+Modal chiqqanda keyin uni yopmoqchi (x close buttonni bosishda) bo'lganda reload qilishda "Reload qilsinmi" deb question window chiqsin?
+
+					        Products				
+product listni o'zi kerak
+
+product listda creat productni bosganda modal boshqa page da bo'lgani ma'qul
+	price so'mda bo'ladi
+	1 - image input qolishi shart (har qanday holda ham)
+	image inputlar link qabul qiladigan input text bo'lishi kerak
+	2 -, 3 - , .. n - input image larni oxiridan donalab o'chiradigan button bo'lishi kerak
+	product image qo'shishda 2 ta button bo'ladi (input image larni qo'shadigan/o'chiradigan bo'lishi kerak)
+	hamma inputlar required bo'lishi kerak
+
+product editda ham ham modal boshqa page da bo'lgani ma'qul(product id bo'yicha zapros tashaymiz)
+
+product row show datas qilinadi (rasmlar slider holatda va balo battar datalar chiqishi kerak)
+Product qaysidur row ustiga bosgandan shu haqida ma'lumot ko'rsatuvchi page yoki window chiqishi kerak (rasmlar slider shaklida chiqishi zarur)
+show productda productdagi hamma bor datalar chiqishi kerak (rasmlar slider shaklida bo'lishi kerak)
+
+pagination ham qilish kerak
+
+						Categories
+category select option bo'lishi kerak, (options lar zapros yordamida bazadan olinishi lozim)
+category ko'rsatadigan table bo'lishi kerak(edit/delete kabi funksiyalar bo'lishi kerak, id ni json-server o'zi hosil qiladi)
+
+						Admins
+registratsiyada email so'raladi (admin id si = admin login teksti)
+
+signinda login bilan email so'raladi,
+xatolik bo'lganda qaysi tomonlama xatolik bo'lganini aytmaslik (login yoki password xato deb chiqarish kerak)
+
+Muvaffaqiyatli logindan keyin dashboard ga kirib toaster(kirdiz deb) chiqishi lozim
+
+superadmin admin ni qura oladi(registratsiya orqali) superadminda createadmin funksiyasi bo'lishi kerak
+
+admin options tanlashi lozim
+
+oddiy admin registratsiya funksiyasi bo'lmaydi (o'zini datasini edit/delete/create qila olmaydi)
+
+superadminda admin lar ro'yxati create/update/delete page lari bo'ladi
+
+edit qilganda data ni urlga search ?name=&password= kabi soxranit qilish kabi saqlanadi

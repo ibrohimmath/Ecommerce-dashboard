@@ -1,0 +1,107 @@
+{
+  "superadmin": [
+    {
+      "id": "superadmin",
+      "firstName": "Terry",
+      "lastName": "Medhurst",
+      "login": "superadmin",
+      "password": "12345678",
+      "email": "atuny0@sohu.com",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwjzNnaM7RfokXcRFGuUCtGs9fztRAMBcRXQ&usqp=CAU"
+    }
+  ],
+  "admin": [
+    {
+      "firstName": "Johnson",
+      "lastName": "Medhurst",
+      "login": "admin1",
+      "password": "12345678",
+      "email": "atuny0@sohu.com",
+      "image": "https://thicc-af.mywaifulist.moe/waifus/eren-yeager-attack-on-titan/Rc5lqF6aJnnZByntql2v51d7m3Ov5OJlx44w7qR3.png",
+      "id": "admin1"
+    },
+    {
+      "firstName": "lorem",
+      "lastName": "ipsum",
+      "login": "lorem003",
+      "password": "321",
+      "email": "loremipsum034@gmail.com",
+      "image": "https://i.pinimg.com/736x/57/b9/71/57b9714ccc972fa4efbe7b47c404f6c2.jpg",
+      "id": "lorem003"
+    }
+  ],
+  "users": [
+    {
+      "id": "9uQFF1Lh",
+      "firstName": "Terry",
+      "lastName": "Medhurst",
+      "email": "atuny0@sohu.com",
+      "phone": "+63 791 675 8914",
+      "login": "9uQFF1Lh",
+      "password": "12345",
+      "image": "https://robohash.org/Terry.png?set=set4"
+    },
+    {
+      "id": "12udFF3L0",
+      "firstName": "Bob",
+      "lastName": "Lorem",
+      "email": "atuny0@sohu.com",
+      "phone": "+63 791 675 8914",
+      "login": "12udFF3L0",
+      "password": "000999",
+      "image": "https://robohash.org/Terry.png?set=set4"
+    }
+  ],
+  "categories": [
+    {
+      "id": "dcbHSDS1",
+      "name": "smartphones"
+    },
+    {
+      "id": "dcbHSDS2",
+      "name": "laptops"
+    },
+    {
+      "id": "dcbHSDS3",
+      "name": "TVs"
+    },
+    {
+      "name": "watches",
+      "id": "H7u11pq"
+    }
+  ],
+  "products": [
+    {
+      "title": "iPhone 8",
+      "description": "An apple mobile which is nothing like apple",
+      "price": "999",
+      "category": "smartphones",
+      "images": "[\"https://cdn.dummyjson.com/product-images/1/1.jpg\",\"https://cdn.dummyjson.com/product-images/1/2.jpg\",\"https://cdn.dummyjson.com/product-images/1/3.jpg\",\"https://cdn.dummyjson.comz/product-images/1/4.jpg\"]",
+      "id": 1
+    },
+    {
+      "title": "Macbook Air",
+      "description": "A great laptop",
+      "price": "1099",
+      "category": "laptops",
+      "images": "[\"https://cdn.dummyjson.com/product-images/1/1.jpg\",\"https://cdn.dummyjson.com/product-images/1/2.jpg\",\"https://cdn.dummyjson.com/product-images/1/3.jpg\",\"https://cdn.dummyjson.com/product-images/1/4.jpg\",\"https://cdn.dummyjson.com/product-images/1/thumbnail.jpg\"]",
+      "id": 2
+    },
+    {
+      "title": "Asus Zenbook",
+      "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
+      "price": "1299",
+      "category": "laptops",
+      "images": "[\"https://m.media-amazon.com/images/I/61-XXPIOivL._AC_UF1000,1000_QL80_.jpg\",\"https://www.ibm.com/content/dam/connectedassets-adobe-cms/worldwide-content/arc/cf/ul/g/3c/87/thinkpad-leadspace.component.xl.ts=1702909108545.jpg/content/adobe-cms/us/en/history/thinkpad/_jcr_content/root/leadspace\"]",
+      "id": 5
+    },
+    {
+      "title": "Lenovo Thinkpad",
+      "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
+      "price": "700",
+      "category": "laptops",
+      "images": "[\"https://olcha.uz/image/700x700/products/2022-07-08/noutbuk-lenovo-thinkpad-x1-carbon-gen-9-i7-1185g7-16512gb-ssd-14-20xw003kus-64585-0.jpeg\",\"https://olcha.uz/image/700x700/products/2022-07-08/noutbuk-lenovo-thinkpad-x1-carbon-gen-9-i7-1185g7-16512gb-ssd-14-20xw003kus-64585-1.jpeg\",\"https://olcha.uz/image/700x700/products/2022-07-08/noutbuk-lenovo-thinkpad-x1-carbon-gen-9-i7-1185g7-16512gb-ssd-14-20xw003kus-64585-2.jpeg\",\"https://olcha.uz/image/700x700/products/2022-07-08/noutbuk-lenovo-thinkpad-x1-carbon-gen-9-i7-1185g7-16512gb-ssd-14-20xw003kus-64585-3.jpeg\"]",
+      "id": 6
+    }
+  ]
+}

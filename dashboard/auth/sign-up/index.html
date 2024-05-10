@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="../../../assets/img/logo.png" alt="">
+        <span class="sidebar-open">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+      <ul>
+        <li>
+          <span class="notification">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notification__num">0</span>
+          </span>
+        </li>
+        <li>
+          <span class="img-user">
+            <img src="../../../assets/img/dashboard/unknown.png" alt="" srcset="">
+          </span>
+        </li>
+      </ul>      
+    </nav>
+    <div class="sidebar">
+      <div class="sidebar__nav">
+        <img src="../../../assets/img/logo.png" alt="">
+        <span class="sidebar-close">
+          <i class="fa-solid fa-xmark"></i>
+        </span>      
+      </div>
+      <div class="user-functions">
+        <div class="user-function logout">
+          <span class="function__logo"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+          <span class="function__name">Log Out</span>
+        </div>
+        <div class="user-function dashboard">
+          <span class="function__logo"><i class="fa-solid fa-house"></i></span>
+          <span class="function__name">Dashboard</span>
+        </div>
+        <div class="user-function products">
+          <span class="function__logo"><i class="fa-solid fa-bag-shopping"></i></span>
+          <span class="function__name">Products</span>
+        </div>
+        <ul class="products-format hidden">
+          <li class="product--show">Product list</li>
+          <li class="product__categories">Categories</li>
+        </ul>
+        <div class="user-function add-products">
+          <span class="function__logo">+</span>
+          <span class="function__name">Add product</span>
+        </div>
+      </div>      
+    </div>
+    <div class="container">
+      <div class="signup">
+        <div class="signup__title">
+          Sign Up
+        </div>
+        <form>
+          <input type="text" placeholder="Firstname" name="firstName" required />
+          <input type="text" placeholder="Lastname" name="lastName" required />
+          <input type="text" placeholder="Username" name="login" required />        
+          <input type="password" placeholder="Password" name="password" required />
+          <input type="email" placeholder="Email" name="email" required />
+          <input type="text" placeholder="Image" name="image" required />
+          <button type="submit">Signup</button>
+        </form>
+        <div class="row__login">
+          <span>Have an account. </span>&nbsp;
+          <span class="goto-login">Log In</span>
+        </div>
+      </div>
+    </div>
+    <script src="./sign-up.js" defer></script>
+  </body>
+</html>
